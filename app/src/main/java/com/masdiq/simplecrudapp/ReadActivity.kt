@@ -39,7 +39,6 @@ class ReadActivity : AppCompatActivity() {
             .baseUrl(RetrofitClient.BASE_URL)
             .build()
             .create(ApiInterface::class.java)
-
         val retofitData = retrofitBuilder.readData()
 
         retofitData.enqueue(object : Callback<List<PostsResponse>?> {

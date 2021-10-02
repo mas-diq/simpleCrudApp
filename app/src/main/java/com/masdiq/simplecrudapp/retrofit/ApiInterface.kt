@@ -3,10 +3,7 @@ package com.masdiq.simplecrudapp.retrofit
 import com.masdiq.simplecrudapp.response.CreateResponse
 import com.masdiq.simplecrudapp.response.PostsResponse
 import retrofit2.Call
-import retrofit2.http.Field
-import retrofit2.http.FormUrlEncoded
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface ApiInterface {
 
@@ -22,4 +19,26 @@ interface ApiInterface {
         @Field("subtitle") subtitle: String,
         @Field("imageURL") imageURL: String
     ): Call<CreateResponse>
+
+    // Update one data
+    @FormUrlEncoded
+    @PUT("api/posts/{id}")
+    fun putPost(
+        @Path("id") id: String?,
+        @Field("title") title: String?,
+        @Field("subtitle") subtitle: String?,
+        @Field("imageURL") imageURL: String?
+    ): Call<PostsResponse>
+
+//    @FormUrlEncoded
+//    @PATCH("posts/{id}")
+//    fun patchPost(
+//        @Field("title") title: String?,
+//        @Field("subtitle") subtitle: String?,
+//        @Field("imageURL") imageURL: String?
+//    ): Call<PostsResponse>
+
+    // Delete one data
+    @DELETE("api/posts/{id}")
+    fun deletePost(@Path("id") id: String): Call<Void>
 }
