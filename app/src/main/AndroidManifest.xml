@@ -12,10 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleCrudApp">
         <activity
+            android:name=".DeleteActivity"
+            android:exported="true" />
+        <activity
+            android:name=".UpdateActivity"
+            android:exported="true" />
+        <activity
+            android:name=".CreateActivity"
+            android:exported="true" />
+        <activity
             android:name=".UploadActivity"
             android:exported="true" />
         <activity
-            android:name=".CrudActivity"
+            android:name=".ReadActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"

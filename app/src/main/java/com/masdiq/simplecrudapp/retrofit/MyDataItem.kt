@@ -1,4 +1,4 @@
-package com.masdiq.simpleretrofit
+package com.masdiq.simplecrudapp.retrofit
 
 data class MyDataItem(
     val title: String,

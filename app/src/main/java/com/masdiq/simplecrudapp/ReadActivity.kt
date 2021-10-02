@@ -5,26 +5,27 @@ import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.masdiq.simpleretrofit.MyDataItem
-import kotlinx.android.synthetic.main.activity_crud.*
+import com.masdiq.simplecrudapp.retrofit.ApiInterface
+import com.masdiq.simplecrudapp.retrofit.MyDataItem
+import kotlinx.android.synthetic.main.activity_read.*
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-const val BASE_URL = "https://c314-180-254-69-211.ngrok.io/"
+const val BASE_URL = "https://6e06-180-254-69-211.ngrok.io/"
 
-class CrudActivity : AppCompatActivity() {
+class ReadActivity : AppCompatActivity() {
 
     lateinit var myAdapter: MyAdapter
     private lateinit var linearLayoutManager: LinearLayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_crud)
+        setContentView(R.layout.activity_read)
         getRecyclerView()
-        getData()
+        readData()
     }
 
     private fun getRecyclerView() {
@@ -33,14 +34,14 @@ class CrudActivity : AppCompatActivity() {
         rv.layoutManager = linearLayoutManager
     }
 
-    private fun getData() {
+    private fun readData() {
         val retrofitBuilder = Retrofit.Builder()
             .addConverterFactory(GsonConverterFactory.create())
             .baseUrl(BASE_URL)
             .build()
             .create(ApiInterface::class.java)
 
-        val retofitData = retrofitBuilder.getData()
+        val retofitData = retrofitBuilder.readData()
 
         retofitData.enqueue(object : Callback<List<MyDataItem>?> {
             @SuppressLint("NotifyDataSetChanged")

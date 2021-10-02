@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.masdiq.simpleretrofit.MyDataItem
+import com.masdiq.simplecrudapp.retrofit.MyDataItem
 import kotlinx.android.synthetic.main.row_items.view.*
 
 class MyAdapter(private val context: Context, private val userlList: List<MyDataItem>) :
