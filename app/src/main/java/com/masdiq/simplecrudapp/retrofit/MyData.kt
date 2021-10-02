@@ -1,3 +1,5 @@
 package com.masdiq.simplecrudapp.retrofit
 
-class MyData : ArrayList<MyDataItem>()
+import com.masdiq.simplecrudapp.response.PostsResponse
+
+class MyData : ArrayList<PostsResponse>()

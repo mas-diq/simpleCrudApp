@@ -7,10 +7,10 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
-import com.masdiq.simplecrudapp.retrofit.MyDataItem
+import com.masdiq.simplecrudapp.response.PostsResponse
 import kotlinx.android.synthetic.main.row_items.view.*
 
-class MyAdapter(private val context: Context, private val userlList: List<MyDataItem>) :
+class MyAdapter(private val context: Context, private val userlList: List<PostsResponse>) :
     RecyclerView.Adapter<MyAdapter.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

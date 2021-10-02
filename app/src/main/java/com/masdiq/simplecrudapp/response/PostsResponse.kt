@@ -1,6 +1,6 @@
-package com.masdiq.simplecrudapp.retrofit
+package com.masdiq.simplecrudapp.response
 
-data class MyDataItem(
+data class PostsResponse(
     val title: String,
     val subtitle: String,
     val imageURL: String,
