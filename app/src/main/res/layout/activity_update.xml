@@ -28,7 +28,7 @@
         app:layout_constraintTop_toBottomOf="@id/tv_status_update">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tv_id"
+            android:id="@+id/tv_id_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Id" />
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toBottomOf="@id/lay_id">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tv_title"
+            android:id="@+id/tv_title_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Title" />
@@ -58,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@id/lay_title">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tv_subtitle"
+            android:id="@+id/tv_subtitle_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="subtitle" />
@@ -72,7 +72,7 @@
         app:layout_constraintTop_toBottomOf="@id/lay_subtitle">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tv_imageURL"
+            android:id="@+id/tv_imageURL_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Image URL" />

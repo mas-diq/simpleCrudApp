@@ -20,10 +20,10 @@ class UpdateActivity : AppCompatActivity() {
 
     private fun updatePost() {
         RetrofitClient.instance.putPost(
-            tv_id.text.toString(),
-            tv_title.text.toString(),
-            tv_subtitle.text.toString(),
-            tv_imageURL.text.toString()
+            tv_id_update.text.toString(),
+            tv_title_update.text.toString(),
+            tv_subtitle_update.text.toString(),
+            tv_imageURL_update.text.toString()
         ).enqueue(object : Callback<PostsResponse> {
             override fun onResponse(call: Call<PostsResponse>, response: Response<PostsResponse>) {
                 val responseText = "Data has updated"
