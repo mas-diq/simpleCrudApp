@@ -27,16 +27,9 @@ interface ApiInterface {
         @Path("id") id: String?,
         @Field("title") title: String?,
         @Field("subtitle") subtitle: String?,
-        @Field("imageURL") imageURL: String?
+        @Field("imageURL") imageURL: String?,
+        @Field("published") published: Boolean? = true
     ): Call<PostsResponse>
-
-//    @FormUrlEncoded
-//    @PATCH("posts/{id}")
-//    fun patchPost(
-//        @Field("title") title: String?,
-//        @Field("subtitle") subtitle: String?,
-//        @Field("imageURL") imageURL: String?
-//    ): Call<PostsResponse>
 
     // Delete one data
     @DELETE("api/posts/{id}")

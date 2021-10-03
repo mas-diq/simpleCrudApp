@@ -33,11 +33,5 @@ class MainActivity : AppCompatActivity() {
             val moveDelete = Intent(this, DeleteActivity::class.java)
             startActivity(moveDelete)
         }
-
-        // Pindah activity ke upload
-        btn_upload.setOnClickListener {
-            val moveUpload = Intent(this, UploadActivity::class.java)
-            startActivity(moveUpload)
-        }
     }
 }

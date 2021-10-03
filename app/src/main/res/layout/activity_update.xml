@@ -64,19 +64,16 @@
             android:hint="subtitle" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lay_imageURL"
+    <ImageView
+        android:id="@+id/image_picker_update"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_marginTop="24dp"
-        app:layout_constraintTop_toBottomOf="@id/lay_subtitle">
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tv_imageURL_update"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Image URL" />
-    </com.google.android.material.textfield.TextInputLayout>
+        android:background="@color/purple_200"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lay_subtitle" />
 
     <Button
         android:id="@+id/btn_submit_update"
@@ -87,5 +84,5 @@
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lay_imageURL" />
+        app:layout_constraintTop_toBottomOf="@+id/image_picker_update" />
 </androidx.constraintlayout.widget.ConstraintLayout>
