@@ -1,10 +1,10 @@
 package com.masdiq.simplecrudapp
 
-import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import com.masdiq.simplecrudapp.response.CreateResponse
+import com.masdiq.simplecrudapp.retrofit.RetrofitClient
 import kotlinx.android.synthetic.main.activity_create.*
 import retrofit2.Call
 import retrofit2.Callback
@@ -22,35 +22,17 @@ class CreateActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_create)
 
-        image_picker.setOnClickListener {
-            pickImage()
-        }
-
         btn_submit_create.setOnClickListener {
             createPost()
-        }
-    }
-
-    fun pickImage() {
-        val choooseImage = Intent(Intent.ACTION_PICK)
-        choooseImage.type = "image/*"
-        startActivityForResult(choooseImage, IMAGE_REQUEST_CODE)
-    }
-
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-        if (requestCode == IMAGE_REQUEST_CODE && resultCode == RESULT_OK) {
-            image_picker.setImageURI(data?.data)
-            imagePicker = image_picker
         }
     }
 
     private fun createPost() {
         with(RetrofitClient) {
             instance.createData(
-                tv_title.text.toString(),
-                tv_subtitle.text.toString(),
-                imagePicker.toString()
+                tv_title_create.text.toString(),
+                tv_content_create.text.toString(),
+                tv_place_create.text.toString()
             ).enqueue(object : Callback<CreateResponse> {
                 override fun onResponse(
                     call: Call<CreateResponse>,

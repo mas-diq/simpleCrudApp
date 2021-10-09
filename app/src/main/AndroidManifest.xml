@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.masdiq.simplecrudapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,7 +12,9 @@
         android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.SimpleCrudApp">
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme.SimpleCrudApp"
+        tools:targetApi="m">
         <activity
             android:name=".DeleteActivity"
             android:exported="true" />
@@ -22,13 +25,10 @@
             android:name=".CreateActivity"
             android:exported="true" />
         <activity
-            android:name=".UploadActivity"
-            android:exported="true" />
-        <activity
-            android:name=".ReadActivity"
-            android:exported="true" />
-        <activity
             android:name=".MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

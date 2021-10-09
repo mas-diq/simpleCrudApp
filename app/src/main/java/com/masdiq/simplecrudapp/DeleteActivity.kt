@@ -2,6 +2,7 @@ package com.masdiq.simplecrudapp
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.masdiq.simplecrudapp.retrofit.RetrofitClient
 import kotlinx.android.synthetic.main.activity_delete.*
 import retrofit2.Call
 import retrofit2.Callback

@@ -16,8 +16,8 @@ interface ApiInterface {
     @POST("api/posts")
     fun createData(
         @Field("title") title: String,
-        @Field("subtitle") subtitle: String,
-        @Field("imageURL") imageURL: String
+        @Field("content") subtitle: String,
+        @Field("place") place: String
     ): Call<CreateResponse>
 
     // Update one data
@@ -26,9 +26,8 @@ interface ApiInterface {
     fun putPost(
         @Path("id") id: String?,
         @Field("title") title: String?,
-        @Field("subtitle") subtitle: String?,
-        @Field("imageURL") imageURL: String?,
-        @Field("published") published: Boolean? = true
+        @Field("content") subtitle: String?,
+        @Field("place") place: String?,
     ): Call<PostsResponse>
 
     // Delete one data

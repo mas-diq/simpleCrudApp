@@ -1,12 +1,11 @@
-package com.masdiq.simplecrudapp
+package com.masdiq.simplecrudapp.retrofit
 
-import com.masdiq.simplecrudapp.retrofit.ApiInterface
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitClient {
 
-    const val BASE_URL = "https://bd1d-180-254-69-211.ngrok.io"
+    const val BASE_URL = "http://34bc-110-137-224-233.ngrok.io"
 
     val instance: ApiInterface by lazy {
         val retrofit = Retrofit.Builder()

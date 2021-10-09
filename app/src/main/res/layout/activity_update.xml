@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginHorizontal="24dp"
+    android:background="@color/primaryColor"
+    android:paddingHorizontal="24dp"
     tools:context=".UpdateActivity">
 
     <TextView
@@ -12,8 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Status"
-        android:textSize="24sp"
+        android:textColor="@color/primaryTextColor"
+        android:textSize="32sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -31,7 +34,12 @@
             android:id="@+id/tv_id_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Id" />
+            android:backgroundTint="@color/primaryLightColor"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Id"
+            android:textColor="@color/primaryTextColor"
+            android:textColorHighlight="@color/secondaryTextColor"
+            android:textColorHint="@color/primaryTextColor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -47,42 +55,61 @@
             android:id="@+id/tv_title_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Title" />
+            android:backgroundTint="@color/primaryLightColor"
+            android:fontFamily="@font/montserrat_regular"
+            android:hint="Title"
+            android:textColor="@color/primaryTextColor"
+            android:textColorHighlight="@color/secondaryTextColor"
+            android:textColorHint="@color/primaryTextColor" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/lay_subtitle"
+        android:id="@+id/lay_content"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         app:layout_constraintTop_toBottomOf="@id/lay_title">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/tv_subtitle_update"
+            android:id="@+id/tv_content_update"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="subtitle" />
+            android:backgroundTint="@color/primaryLightColor"
+            android:hint="Content"
+            android:textColor="@color/primaryTextColor"
+            android:textColorHighlight="@color/secondaryTextColor"
+            android:textColorHint="@color/primaryTextColor" />
     </com.google.android.material.textfield.TextInputLayout>
 
-    <ImageView
-        android:id="@+id/image_picker_update"
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lay_place"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:background="@color/purple_200"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lay_subtitle" />
+        app:layout_constraintTop_toBottomOf="@id/lay_content">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/tv_place_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/primaryLightColor"
+            android:hint="Place"
+            android:textColor="@color/primaryTextColor"
+            android:textColorHighlight="@color/secondaryTextColor"
+            android:textColorHint="@color/primaryTextColor" />
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/btn_submit_update"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:backgroundTint="@color/yellow"
+        android:fontFamily="@font/montserrat_bold"
         android:text="Update"
+        android:textColor="@color/primaryTextColor"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/image_picker_update" />
+        app:layout_constraintTop_toBottomOf="@+id/lay_place" />
 </androidx.constraintlayout.widget.ConstraintLayout>

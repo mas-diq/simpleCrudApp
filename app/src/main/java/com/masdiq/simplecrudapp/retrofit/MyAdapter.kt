@@ -1,12 +1,11 @@
-package com.masdiq.simplecrudapp
+package com.masdiq.simplecrudapp.retrofit
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
+import com.masdiq.simplecrudapp.R
 import com.masdiq.simplecrudapp.response.PostsResponse
 import kotlinx.android.synthetic.main.row_items.view.*
 
@@ -19,19 +18,15 @@ class MyAdapter(private val context: Context, private val userlList: List<PostsR
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val item = userlList[position]
-        Glide.with(holder.itemView.context)
-            .load(item.imageURL)
-            .apply(RequestOptions())
-            .into(holder.image)
         holder.title.text = userlList[position].title
-        holder.subtitle.text = userlList[position].subtitle
+        holder.place.text = userlList[position].place
+        holder.content.text = userlList[position].content
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         var title = itemView.tv_title!!
-        var subtitle = itemView.tv_subtitle!!
-        var image = itemView.image!!
+        var place = itemView.tv_place!!
+        var content = itemView.tv_content!!
     }
 
     override fun getItemCount(): Int {
