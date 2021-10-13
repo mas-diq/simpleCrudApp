@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/primaryColor"
     android:paddingHorizontal="24dp"
-    tools:context=".DeleteActivity">
+    tools:context=".View.DeleteActivity">
 
     <TextView
         android:id="@+id/tv_status_delete"

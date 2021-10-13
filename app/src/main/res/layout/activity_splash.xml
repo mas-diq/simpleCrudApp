@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/primaryColor"
     android:padding="24dp"
-    tools:context=".SplashActivity">
+    tools:context=".View.SplashActivity">
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,7 +17,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.3"
-        app:srcCompat="@drawable/notepad" />
+        app:srcCompat="@drawable/notepad"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:id="@+id/textView"

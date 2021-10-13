@@ -1,4 +1,4 @@
-package com.masdiq.simplecrudapp.retrofit
+package com.masdiq.simplecrudapp.View
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.masdiq.simplecrudapp.R
-import com.masdiq.simplecrudapp.response.PostsResponse
+import com.masdiq.simplecrudapp.Model.response.PostsResponse
 import kotlinx.android.synthetic.main.row_items.view.*
 
 class MyAdapter(private val context: Context, private val userlList: List<PostsResponse>) :

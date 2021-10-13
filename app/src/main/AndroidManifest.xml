@@ -16,19 +16,19 @@
         android:theme="@style/Theme.SimpleCrudApp"
         tools:targetApi="m">
         <activity
-            android:name=".DeleteActivity"
+            android:name=".View.DeleteActivity"
             android:exported="true" />
         <activity
-            android:name=".UpdateActivity"
+            android:name=".View.UpdateActivity"
             android:exported="true" />
         <activity
-            android:name=".CreateActivity"
+            android:name=".View.CreateActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".View.MainActivity"
             android:exported="true" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".View.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

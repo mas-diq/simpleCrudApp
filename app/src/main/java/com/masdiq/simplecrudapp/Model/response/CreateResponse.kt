@@ -1,4 +1,4 @@
-package com.masdiq.simplecrudapp.response
+package com.masdiq.simplecrudapp.Model.response
 
 data class CreateResponse(
     val title: String?,

@@ -1,7 +1,7 @@
-package com.masdiq.simplecrudapp.retrofit
+package com.masdiq.simplecrudapp.Model.retrofit
 
-import com.masdiq.simplecrudapp.response.CreateResponse
-import com.masdiq.simplecrudapp.response.PostsResponse
+import com.masdiq.simplecrudapp.Model.response.CreateResponse
+import com.masdiq.simplecrudapp.Model.response.PostsResponse
 import retrofit2.Call
 import retrofit2.http.*
 

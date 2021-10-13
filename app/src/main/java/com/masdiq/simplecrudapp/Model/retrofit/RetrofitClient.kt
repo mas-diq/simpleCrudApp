@@ -1,4 +1,4 @@
-package com.masdiq.simplecrudapp.retrofit
+package com.masdiq.simplecrudapp.Model.retrofit
 
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory

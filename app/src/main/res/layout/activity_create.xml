@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/primaryColor"
     android:paddingHorizontal="24dp"
-    tools:context=".CreateActivity">
+    tools:context=".View.CreateActivity">
 
     <TextView
         android:id="@+id/tv_status_create"
